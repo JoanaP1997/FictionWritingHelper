@@ -102,5 +102,8 @@
       <PackageReference Include="System.Runtime.WindowsRuntime.UI.Xaml" Version="4.6.0" />
       <PackageReference Include="System.ValueTuple" Version="4.5.0" />
     </ItemGroup>
+    <ItemGroup>
+      <Content Include="ReadMe.md" />
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
