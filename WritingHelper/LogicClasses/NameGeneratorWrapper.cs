@@ -1,6 +1,6 @@
 ﻿namespace WritingHelper.LogicClasses
 {
-    public class NameGenerator
+    public class NameGeneratorWrapper
     {
         
     }

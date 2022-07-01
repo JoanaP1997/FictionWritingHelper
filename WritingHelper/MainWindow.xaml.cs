@@ -24,7 +24,7 @@ namespace WritingHelper
         {
             List<String> s = new List<string>
             {
-                "Page One", "Page Two", "Page Three"
+                "Name Generator", "Page Two", "Page Three"
             };
             navigation_list_view.ItemsSource = s;
             
@@ -35,7 +35,12 @@ namespace WritingHelper
         {
             ModernWpf.Controls.ListView listview = (ModernWpf.Controls.ListView) sender;
             String selectedItem = (String)listview.SelectedItem;
-            //MessageBox.Show(selectedItem);
+            if (selectedItem.Equals("Name Generator"))
+            {
+                name_generator_frame.Navigate(new NameGenerator());
+            }
+
+            
         }
     }
 }

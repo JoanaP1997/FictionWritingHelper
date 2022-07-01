@@ -3,10 +3,68 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ui="http://schemas.modernwpf.com/2019"
       xmlns:local="clr-namespace:WritingHelper"
       mc:Ignorable="d"
-      Title="NameGenerator" Height="450" Width="800">
+      Title="NameGenerator" Height="450" Width="400"
+      Loaded="NameGenerator_OnLoaded">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Label> Gender: </Label>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Label> Country of Birth: </Label>
+            </Grid>
+            <Grid Grid.Row="5">
+                <Label> Date of Birth: </Label>
+            </Grid>
+            <Grid Grid.Row="7">
+                <Button Click="ButtonBase_OnClick"> Generate Name </Button>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <ComboBox x:Name="gender_combo_box" MaxHeight="30" VerticalAlignment="Top"></ComboBox>
+            </Grid>
+            <Grid Grid.Row="3">
+                <ComboBox x:Name="cob_combo_box" MaxHeight="30" VerticalAlignment="Top" SelectionChanged="Cob_combo_box_OnSelectionChanged"></ComboBox>
+            </Grid>
+            <Grid Grid.Row="5">
+                <ComboBox x:Name="dob_combo_box" MaxHeight="30" VerticalAlignment="Top"></ComboBox>
+            </Grid>
+            <Grid Grid.Row="7">
+                <Label x:Name="name_label" VerticalAlignment="Center"></Label>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

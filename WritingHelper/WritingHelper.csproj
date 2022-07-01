@@ -52,7 +52,7 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </ApplicationDefinition>
-        <Compile Include="LogicClasses\NameGenerator.cs" />
+        <Compile Include="LogicClasses\NameGeneratorWrapper.cs" />
         <Compile Include="NameGenerator.xaml.cs">
           <DependentUpon>NameGenerator.xaml</DependentUpon>
         </Compile>
